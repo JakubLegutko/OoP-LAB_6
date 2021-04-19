@@ -25,6 +25,7 @@ namespace OoP_LAB_6
             StrategyList.Add(new StrategyEverySecondBetray());
             StrategyList.Add(new StrategyAlwaysTrue());
             StrategyList.Add(new StrategyBetrayIf());
+            StrategyList.Add(new StrategyBestStrat());
             for (int listLength = 0; listLength < StrategyList.Count; listLength++)
             {
                 for (int strategyCount = 0; strategyCount < StrategyList.Count; strategyCount++)
