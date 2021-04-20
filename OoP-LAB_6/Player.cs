@@ -6,8 +6,15 @@ namespace OoP_LAB_6
 {
     class Player
     {
+        
         private IStrategy currentStrategy; // the algorithm used to make moves
-        public List<bool> PartnerMoves { get; set; } // true means cooperation, false means betrayal
+        public IStrategy CurrentStrategy
+        {
+            get { return currentStrategy; }
+         
+        }
+    
+    public List<bool> PartnerMoves { get; set; } // true means cooperation, false means betrayal
         public int Score { get; set; } // game score
 
         public Player(IStrategy initialStrategy)
@@ -18,6 +25,7 @@ namespace OoP_LAB_6
         public void SetStrategy(IStrategy newStrategy)
         {
             currentStrategy = newStrategy;
+            
         }
 
         public bool GetNextMove()

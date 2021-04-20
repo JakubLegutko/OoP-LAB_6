@@ -74,6 +74,12 @@ namespace OoP_LAB_6
                     globalP2 += p2.Score;
                     Console.WriteLine("Player1 score: " + p1.Score);
                     Console.WriteLine("Player2 score: " + p2.Score);
+                    if (p1.Score > p2.Score)
+                        Console.WriteLine("Better Strategy for this round was P1's :" + p1.CurrentStrategy);
+                    else if (p2.Score > p1.Score)
+                        Console.WriteLine("Better Strategy for this round was P2's :" + p2.CurrentStrategy);
+                    else
+                        Console.WriteLine("The strategies were equal");
                 }
 
                 Console.WriteLine("Player1 score globally: " + globalP1);
